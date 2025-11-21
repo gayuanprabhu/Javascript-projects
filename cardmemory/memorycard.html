@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Memory Matching Game</title>
+<style>
+  body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; margin-top: 50px; }
+  #game { display: grid; grid-template-columns: repeat(4, 100px); gap: 10px; }
+  .card { width: 100px; height: 100px; background: #007bff; cursor: pointer; color: transparent; display: flex; justify-content: center; align-items: center; font-size: 2em; border-radius: 8px; user-select: none; }
+  .card.flipped, .card.matched { background: #fff; color: black; cursor: default; }
+  #message { margin-top: 20px; font-size: 1.2em; }
+  button { margin-top: 10px; padding: 6px 12px; }
+</style>
+</head>
+<body>
+
+<div id="game"></div>
+<div id="message"></div>
+<button id="reset">Reset</button>
+
+<script src="index.js"></script>
+
+</body>
+</html>
