@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Simple Quiz</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; }
+  .question { font-size: 1.3em; margin-bottom: 20px; }
+  .options button { display: block; width: 100%; margin-bottom: 10px; padding: 10px; font-size: 1em; cursor: pointer; }
+  #result { margin-top: 20px; font-size: 1.2em; }
+  #next { margin-top: 10px; padding: 8px 16px; display: none; }
+</style>
+</head>
+<body>
+
+<div id="quiz">
+  <div class="question"></div>
+  <div class="options"></div>
+  <div id="result"></div>
+  <button id="next">Next Question</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
