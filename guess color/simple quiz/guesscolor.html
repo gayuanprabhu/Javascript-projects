@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guess the Color</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+  #colorBox { width: 200px; height: 200px; margin: 0 auto 20px; border-radius: 12px; }
+  input { padding: 8px; width: 150px; font-size: 1em; }
+  button { padding: 8px 16px; margin-left: 8px; }
+  #message { margin-top: 20px; font-size: 1.2em; }
+</style>
+</head>
+<body>
+
+<div id="colorBox"></div>
+<input type="text" id="guess" placeholder="Enter RGB (e.g. 255,0,0)" />
+<button id="checkBtn">Check</button>
+<div id="message"></div>
+<button id="newColor">New Color</button>
+<script src="script.js"></script>
+
+</body>
+</html>
