@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gayatri Prabhu | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Gayatri Prabhu</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="darkToggle">🌙 Theme </button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm Gayatri P.</h1>
+    <p>Frontend Developer | Web Enthusiast | Tech Explorer</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p class="centered-text">
+      I'm a Computer Science graduate passionate about building responsive and accessible web interfaces.
+      I enjoy turning complex problems into simple, beautiful designs. When I'm not coding, you’ll find me exploring UI trends or sketching new ideas.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="images/agricare.png" alt="AgriCare project" />
+        <h3>AgriCare</h3>
+        <p>An API-based app that helps users understand plant health and growth patterns.</p>
+      </div>
+      <div class="project">
+        <img src="images/attendance.png" alt="Attendance Management System" />
+        <h3>Attendance System</h3>
+        <p>A web app to manage student attendance built with Python, HTML, and CSS.</p>
+      </div>
+      <div class="project">
+        <img src="images/bookreader.png" alt="Online Book Reader" />
+        <h3>Online Book Reader</h3>
+        <p>Android app for reading books online using Java and Firebase.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Gayatri Prabhu | Built with 💜
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
