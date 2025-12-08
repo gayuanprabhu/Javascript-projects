@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Whack-a-Mole</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+  #game { display: grid; grid-template-columns: repeat(3, 100px); grid-gap: 10px; justify-content: center; }
+  .hole { width: 100px; height: 100px; background: #8b4513; border-radius: 50%; position: relative; }
+  .mole { background: #444; width: 80px; height: 80px; border-radius: 50%; position: absolute; top: 10px; left: 10px; cursor: pointer; display: none; }
+  .mole.active { display: block; }
+  #score { font-size: 1.5em; margin-top: 20px; }
+  button { margin-top: 15px; padding: 8px 16px; }
+</style>
+</head>
+<body>
+
+<div id="game">
+  <div class="hole"><div class="mole"></div></div>
+  <div class="hole"><div class="mole"></div></div>
+  <div class="hole"><div class="mole"></div></div>
+  <div class="hole"><div class="mole"></div></div>
+  <div class="hole"><div class="mole"></div></div>
+  <div class="hole"><div class="mole"></div></div>
+  <div class="hole"><div class="mole"></div></div>
+  <div class="hole"><div class="mole"></div></div>
+  <div class="hole"><div class="mole"></div></div>
+</div>
+
+<div id="score">Score: 0</div>
+<button id="start">Start Game</button>
+
+<script src="index.js"></script>
+  
+
+</body>
+</html>
