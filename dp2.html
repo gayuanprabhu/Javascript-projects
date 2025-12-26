@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Your WhatsApp DP</title>
+  <style>
+    body {
+      background: #111;
+      color: #39ff14;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+    }
+    .container {
+      margin-top: 40px;
+    }
+    .neon-box {
+      border: 3px solid #39ff14;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 20px #39ff14;
+      margin: auto;
+      padding: 15px;
+      width: 350px;
+    }
+    button {
+      background: #39ff14;
+      color: #111;
+      margin-top: 10px;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 0 10px #39ff14;
+    }
+    input {
+      background: #222;
+      color: #39ff14;
+      border: 2px solid #39ff14;
+      padding: 10px;
+      font-size: 18px;
+      width: 80%;
+      border-radius: 7px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🖥️ <span style="color:#39ff14;">Create Your WhatsApp DP</span></h2>
+    <div class="neon-box">
+      <input id="dpText" type="text" value="console.log(' Life Is Nothing But A Bug');" />
+      <br>
+      <button onclick="renderDP()">Render</button>
+      <br>
+      <button onclick="downloadDP()">Download</button>
+    </div>
+    <br>
+    <canvas id="dpCanvas" width="340" height="120" style="border:3px solid #39ff14; box-shadow:0 0 15px #39ff14;"></canvas>
+  </div>
+
+  <script>
+    function renderDP() {
+      const canvas = document.getElementById('dpCanvas');
+      const ctx = canvas.getContext('2d');
+      const text = document.getElementById('dpText').value;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.font = '20px Courier New';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.shadowColor = '#39ff14';
+      ctx.shadowBlur = 10;
+      ctx.fillStyle = '#39ff14';
+
+      // Ensure text fits: shrink font size if too long
+      let fontSize = 20;
+      ctx.font = fontSize + "px Courier New";
+      while (ctx.measureText(text).width > canvas.width - 20 && fontSize > 10) {
+        fontSize -= 2;
+        ctx.font = fontSize + "px Courier New";
+      }
+
+      ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+    }
+
+    function downloadDP() {
+      const canvas = document.getElementById('dpCanvas');
+      const link = document.createElement('a');
+      link.download = 'whatsapp-dp.png';
+      link.href = canvas.toDataURL();
+      link.click();
+    }
+
+    // Initial render
+    renderDP();
+  </script>
+</body>
+</html>
